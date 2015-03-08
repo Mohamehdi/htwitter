@@ -6,11 +6,13 @@ class TweetsController < ApplicationController
 	def new
 		# Create a new instance of the class Tweet that we just created as a model
 		@tweet = Tweet.new 
+		@testing = Tweet.all
 	end
 
 	def create
 		# This @tweet has no idea that the other @tweet in the othe action. THEY ARE DIFFRENT AND HAVE NOTHING TO DO WITH EACH OTHER!!!! 
 		@tweet = Tweet.new(tweet_params)
+		@testing = Tweet.all
 		@tweet.user = current_user
 		if @tweet.save
 			flash[:success] = "You have created a tweet!"

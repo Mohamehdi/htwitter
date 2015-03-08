@@ -2,3 +2,12 @@
   <%= f.input :content %>
   <%= f.button :submit, value: "Create Tweet", class: "btn btn-large btn-success" %>
 <% end %>
+
+<ul class="list-group">
+	<% @testing.each do |test| %>
+		<li class="list-group-item">
+			<%= test.content %> | <%= test.user.email %>
+		</li>
+	<% end %> 
+</ul>
+

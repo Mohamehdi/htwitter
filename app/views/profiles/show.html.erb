@@ -1,0 +1,12 @@
+<h1> Profile </h1>
+<h3> <%= @profile.first_name %> | <%= @profile.user.email %>	 </h3>
+<ul class="list-group">
+	<li class="list-group-item">
+			<%= @profile.description %>	
+	</li>	
+</ul>
+<%= image_tag @profile.picture %>
+
+
+
+

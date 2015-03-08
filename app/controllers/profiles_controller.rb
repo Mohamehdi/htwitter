@@ -10,7 +10,7 @@ class ProfilesController < ApplicationController
 		if @profile.save
 			flash[:success] = "You have created a profile! :D"
 			# render vs redirect ? 
-			redirect_to new_tweet_path
+			redirect_to profile_path(current_user.profile)
 		else 
 			# redirect_to new_tweet_path
 			# YOU CAN'T SAY REDIRECT HERE BECAUSE WE NEED TO KEEP TRACK OF THE @TWEET EVEN IT'S LONG SO THAT THE USER 
@@ -22,5 +22,10 @@ class ProfilesController < ApplicationController
 	def profile_params
 		params.require(:profile).permit(:description, :first_name, :picture)
 	end 
+
+	# It's a part of resources 
+	def show 
+		@profile = Profile.find(params[:id])
+	end
 
 end

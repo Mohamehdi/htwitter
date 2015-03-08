@@ -41,6 +41,9 @@ gem 'carrierwave'
 # gem for follower/ following relationships
 gem 'acts_as_follower'
 
+# gem for hashtags 
+gem 'twitter-text', '~>1.10.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

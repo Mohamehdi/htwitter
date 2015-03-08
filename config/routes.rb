@@ -7,11 +7,18 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root  'static_pages#main_page'
 
+  # Pages for tweets 
   resources :tweets
 
+  # Pages for profiles 
   resources :profiles
 
+  # Pages for following 
   resources :follows, only: :create
+
+  # Pages for hashtags 
+  resources :hashtags, only: :show
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

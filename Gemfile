@@ -35,8 +35,11 @@ gem 'simple_form'
 # user registration 
 gem 'devise'
 
-# gem for pictures 
+# gem for uploading files
 gem 'carrierwave'
+
+# gem for follower/ following relationships
+gem 'acts_as_follower'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -16,8 +16,12 @@ class TweetsController < ApplicationController
 			flash[:success] = "You have created a tweet!"
 			# render vs redirect ? 
 			redirect_to new_tweet_path
+		else 
+			# redirect_to new_tweet_path
+			# YOU CAN'T SAY REDIRECT HERE BECAUSE WE NEED TO KEEP TRACK OF THE @TWEET EVEN IT'S LONG SO THAT THE USER 
+			# DOESN'T HAVE TO TYPE EVERYTHING ALL OVER AGAIN
+			render 'new'
 		end
-		@tweet.save 
 		# render 'new'
 	end
 

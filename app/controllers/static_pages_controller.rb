@@ -1,7 +1,5 @@
 class StaticPagesController < ApplicationController
 	
-	before_action :authenticate_user!
-
 	def main_page
 		if user_signed_in?
 			if current_user.profile
